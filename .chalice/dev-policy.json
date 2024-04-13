@@ -1,0 +1,39 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "arn:*:logs:*:*:*"
+        }
+    ],
+    "Resources": {
+        "VisitedListingsTable": {
+            "Type": "AWS::DynamoDB::Table",
+            "Properties": {
+                "TableName": "VisitedListings",
+                "AttributeDefinitions": [
+                    {
+                        "AttributeName": "id",
+                        "AttributeType": "N"
+                    }
+                ],
+                "KeySchema": [
+                    {
+                        "AttributeName": "id",
+                        "KeyType": "HASH"
+                    }
+                ],
+                "BillingMode": "PAY_PER_REQUEST",
+                "TTLSpecification": {
+                    "AttributeName": "ttl",
+                    "Enabled": true
+                }
+            }
+        }
+    }
+}

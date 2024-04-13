@@ -1,2 +1,5 @@
 beautifulsoup4
-python-craigslist
+boto3
+chalice
+loguru
+python-telegram-bot==13.11

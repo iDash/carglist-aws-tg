@@ -1,0 +1,18 @@
+{
+  "version": "2.0",
+  "app_name": "carglist-tg-bot",
+  "api_gateway_endpoint_type": "REGIONAL",
+  "environment_variables": {
+    "TELEGRAM_TOKEN": "token",
+    "LISTINGS_TABLE": "name",
+    "TTL": 5184000  
+  },
+  "lambda_timeout": 60,
+  "stages": {
+    "dev": {
+      "api_gateway_stage": "api",
+      "autogen_policy": false,
+      "iam_policy_file": "dev-policy.json"
+    }
+  }
+}
