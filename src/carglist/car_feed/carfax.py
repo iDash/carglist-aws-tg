@@ -24,6 +24,6 @@ def send_post_request(url, headers, data):
 
 
 # Example usage:
-# vin_number = "JTMZFREV8JJ160590"
+# vin_number = "5XYKT3A1XCG259070"
 # carfax_data = carfax_price_range(vin_number)
 # print(vars(carfax_data))

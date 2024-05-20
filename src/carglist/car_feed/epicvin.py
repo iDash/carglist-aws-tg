@@ -9,6 +9,7 @@ def epicvin_info(vin):
     print(f"[{vin}] Pull EpicVin info")
     params = {"key": api_key, "vin": vin}
     json_response = send_get_request(url, params)
+    # print(json_response)
     return History(json_response.get("data")) if json_response else None
 
 
@@ -23,6 +24,6 @@ def send_get_request(url, params=None):
 
 
 # Example usage:
-# vin_number = "2T3WFREV1JW482539"
+# vin_number = "JTJGK31U670006257"
 # epicvin_data = epicvin_info(vin_number)
 # print(vars(epicvin_data))

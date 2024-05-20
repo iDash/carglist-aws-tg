@@ -1,0 +1,23 @@
+{
+  "TableName": "CarListings",
+  "KeySchema": [
+      {
+          "AttributeName": "url",
+          "KeyType": "HASH"
+      }
+  ],
+  "AttributeDefinitions": [
+      {
+          "AttributeName": "url",
+          "AttributeType": "S"
+      },
+      {
+          "AttributeName": "starred",
+          "AttributeType": "BOOL"
+      }
+  ],
+  "ProvisionedThroughput": {
+      "ReadCapacityUnits": 5,
+      "WriteCapacityUnits": 5
+  }
+}

@@ -3,11 +3,13 @@
   "app_name": "carglist-tg-bot",
   "api_gateway_endpoint_type": "REGIONAL",
   "environment_variables": {
-    "TELEGRAM_TOKEN": "token",
-    "LISTINGS_TABLE": "name",
+    "TELEGRAM_TOKEN": "6807609386:AAHpwVLANmoxZNpaIRJM7dzVLOgInod-aDA",
+    "LISTINGS_TABLE": "VisitedListings",
     "TTL": 5184000  
   },
-  "lambda_timeout": 60,
+  "lambda_timeout": 60, 
+  "lambda_memory_size": 128,
+  "log_retention_in_days": 1,
   "stages": {
     "dev": {
       "api_gateway_stage": "api",
